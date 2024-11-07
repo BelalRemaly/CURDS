@@ -1,0 +1,6 @@
+CURDS 
+    C => create 
+    U => update
+    R => read 
+    D => delete 
+    S => search 

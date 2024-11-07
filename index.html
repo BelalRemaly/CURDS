@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <title>CRUDS</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>CRUDS</h1>
+            <span>product managment system</span>
+        </header>
+        <section>
+            <form action="">
+                <div class="title">
+                    <label for="title">Title</label>
+                    <input type="text" placeholder="title" name="title" id="title">
+                </div>
+                <div class="row">
+                    <div class="price">
+                        <label for="price">price</label>
+                        <input onkeyup="calc()" type="number" name="price" placeholder="price" id="price" required>
+                    </div>
+                    <div class="discound">
+                        <label for="disc">discound</label>
+                        <input onkeyup="calc()" type="number" name="disc" placeholder="discound" id="disc" required>
+                    </div>
+                    <div class="taxes">
+                        <label for="tax">taxes</label>
+                        <input onkeyup="calc()" type="number" name="tax" placeholder="taxes" id="taxes" required>
+                    </div>
+                    <div class="expire">
+                        <label for="expire">expire</label>
+                        <input type="month" name="expire" placeholder="expire date" id="date" required>
+                    </div>
+                    <div class="total" id="total">total</div>
+                </div>
+                <div class="tt">
+                    <div class="amount">
+                        <label for="amount">amount</label>
+                        <input type="number" name="amount" placeholder="amount" id="amount" required>
+                    </div>
+                    <div class="cat">
+                        <label for="cat">category</label>
+                        <input type="text" name="cat" placeholder="category" id="cat">
+                    </div>
+                </div>
+            </form>
+            <div class="submit">
+                <button id="creat" onclick="crea()">creat</button>
+            </div>
+            <div class="search">
+                <input type="search" placeholder="search">
+            </div>
+            <div class="buttons">
+                <button>search by title</button>
+                <button>search by category</button>
+            </div>
+            <div class="delete">
+                <button id="deleteAll" onclick="delAll()">Delete all</button>
+            </div>
+        </section>
+    </div>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>title</th>
+            <th>price</th>
+            <th>total</th>
+            <th>category</th>
+            <th>amount</th>
+            <th>expire</th>
+            <th>update</th>
+            <th>delete</th>
+        </tr>
+        <tbody id="table">
+        </tbody>
+    </table>
+    <script src="./main.js"></script>
+</body>
+
+</html>
